@@ -1,251 +1,187 @@
-const highlights = [
-  {
-    label: "Years Experience",
-    value: "7+",
-    detail: "SaaS, loyalty, consumer apps",
-  },
-  {
-    label: "Products Shipped",
-    value: "10+",
-    detail: "Revenue-ready builds",
-  },
-  {
-    label: "Platforms",
-    value: "Web & Mobile",
-    detail: "React, React Native, PWA",
-  },
+const heroStats = [
+  { label: "Experience", value: "7+ Years", detail: "Product-focused shipping" },
+  { label: "Apps Delivered", value: "10+", detail: "Web + Mobile + SaaS" },
+  { label: "AI Systems", value: "LLM / RAG", detail: "Agents, analytics, automation" },
+  { label: "Hackathon", value: "1st Place", detail: "22+ teams at company event" },
 ];
 
-const expertise = [
+const capabilityTracks = [
   {
-    title: "AI & Product Innovation",
-    items: [
-      "AI Agents · Agentic AI · Generative AI",
-      "Microsoft Copilot · Workflow Automation",
-      "RAG · Fine Tuning",
+    title: "LLM Engineering",
+    score: 94,
+    bullets: [
+      "RAG architecture, retrieval strategy, and eval loops",
+      "Fine-tuning workflows and prompt optimization",
+      "Copilot-style assistants integrated into product workflows",
     ],
   },
   {
-    title: "Frontend Engineering & UX",
-    items: [
-      "React · Next.js · React Native",
-      "Tailwind CSS · Progressive Web Apps",
-      "Component-driven design systems",
+    title: "Agentic Product Automation",
+    score: 91,
+    bullets: [
+      "Marketing agents for campaign orchestration and follow-ups",
+      "Workflow engines for loyalty/rewards decision trees",
+      "Conversational automation for customer support",
     ],
   },
   {
-    title: "Algorithms & Systems",
-    items: [
-      "Data Structures · Problem Solving",
-      "Node.js · Fastify · PostgreSQL",
-      "MongoDB · AWS · Knex.js",
+    title: "Frontend + Mobile Excellence",
+    score: 96,
+    bullets: [
+      "React, Next.js, Tailwind, React Native",
+      "Component systems and reusable UX architecture",
+      "High-performance interfaces with measurable conversion uplift",
     ],
   },
 ];
 
-const experiences = [
+const featuredWins = [
+  {
+    title: "Company Hackathon — 1st Place",
+    description:
+      "Won first place among 22+ teams by building a self-hosted RAG solution with end-to-end ownership across UI, data pipelines, and backend orchestration.",
+    badge: "Winner",
+  },
+  {
+    title: "RAG Auto Reporting + Dynamic Charts",
+    description:
+      "Designed an internal auto-reporting system that converts operational data into RAG-grounded summaries and dynamic chart narratives for faster decision-making.",
+    badge: "AI Impact",
+  },
+  {
+    title: "Contractor Rewards Business Lift",
+    description:
+      "Delivered 30% growth in first-time conversions and 30% increase in invoice submissions, contributing to a 10% revenue uplift.",
+    badge: "Revenue",
+  },
+];
+
+const timeline = [
   {
     role: "Senior Software Developer",
-    org: "BI WORLDWIDE (Contractor Rewards & Phoenix)",
-    timeframe: "Dec 2022 – Present",
-    highlights: [
-      "Built Contractor Rewards frontend with React + Tailwind; delivered reusable UI components and launched iOS/Android app end-to-end.",
-      "Lifted first-time user conversions by 30% and invoice submissions by 30%, driving 10% revenue growth.",
-      "Core engineer for Channel Smart 2.0 multi-tenant SaaS platform, owning architecture and scale-up to production.",
-      "Integrated AI-powered agents and Copilot-style workflows to automate loyalty journeys.",
+    company: "BI WORLDWIDE",
+    period: "Dec 2022 – Present",
+    points: [
+      "Led Contractor Rewards as a frontend-first, full-stack owner including mobile delivery.",
+      "Integrated LLM-powered assistants and automation layers for loyalty engagement.",
+      "Drove architecture decisions for multi-tenant SaaS foundations in Phoenix/Channel Smart 2.0.",
     ],
   },
   {
     role: "Co-founder & Full Stack Developer",
-    org: "To One App (Startup)",
-    timeframe: "Jul 2022 – Dec 2022",
-    highlights: [
-      "Built a social-commerce MVP connecting consumers to decentralized producers with profit-sharing models.",
+    company: "To One App",
+    period: "Jul 2022 – Dec 2022",
+    points: [
+      "Built social-commerce MVP connecting decentralized producers with consumer demand.",
+      "Designed profit-sharing and marketplace mechanics with product-first thinking.",
     ],
   },
   {
     role: "Senior Software Developer (Freelance)",
-    org: "Meetmile Stone Designs",
-    timeframe: "Jul 2019 – Jul 2022",
-    highlights: [
-      "Delivered SaaS and e-commerce solutions (CareRakshak, FreshToHome Delivery) using React, React Native, AWS, MongoDB, and Node.js.",
-      "Mentored junior developers on coding standards, design best practices, and code reviews.",
-      "Scaled a freelance practice into 6+ successful client projects across SaaS and commerce.",
-    ],
-  },
-  {
-    role: "Full Stack Developer",
-    org: "GyanMatrix Technologies",
-    timeframe: "Feb 2018 – Jan 2019",
-    highlights: [
-      "Enhanced UI performance for NeonMob collectible gaming platform.",
-      "Rebuilt Loany fintech experience in React Native for a mobile-first upgrade.",
-    ],
-  },
-  {
-    role: "Software Developer Intern",
-    org: "Juspay Technologies",
-    timeframe: "Jun 2017 – Jan 2018",
-    highlights: [
-      "Built scalable features in PureScript and Haskell.",
-      "Implemented the Juspay Fuel App as a cross-platform PWA.",
+    company: "Meetmile Stone Designs",
+    period: "Jul 2019 – Jul 2022",
+    points: [
+      "Delivered 6+ SaaS/e-commerce products across healthcare and delivery domains.",
+      "Mentored developers and established quality standards for scalable shipping.",
     ],
   },
 ];
 
-const achievements = [
-  "Hackathon Winner: Built a self-hosted RAG model in Databricks, covering UI, AI, and backend layers.",
-  "Product Impact: Drove 30% increase in invoice submissions and repeat engagement for Contractor Rewards.",
-  "UI/UX Standards: Established atomic components architecture adopted across Phoenix.",
-  "Conversational AI: Reduced customer query pain points by 80% with a chatbot for Contractor Rewards.",
-];
-
-const certifications = [
-  "Microsoft Copilot Certification",
-  "UpGrad – Generative AI Course",
-  "Technology for Product Managers (LinkedIn Learning)",
-  "Characteristics of Great Scrum Master (LinkedIn Learning)",
-];
-
-const personalArticles = [
-  {
-    title: "The Quiet Power of Tamil: A Language Built for Eternity",
-    summary:
-      "An exploration of Tamil as a living archive of identity, philosophy, and cultural resilience.",
-  },
-  {
-    title: "Geo-Politics in a Multipolar World",
-    summary:
-      "Observations on how technology, energy, and culture will redraw global power lines.",
-  },
-  {
-    title: "A Personal Manifesto on Craft",
-    summary:
-      "Why speed matters, but craft keeps products alive long after launch.",
-  },
-];
-
-const contactLinks = [
-  { label: "Email", value: "arunpalanisamy21@gmail.com" },
-  { label: "Phone", value: "+91 94455 28764" },
-  { label: "GitHub", value: "github.com/arunpalanisamy" },
-  { label: "LinkedIn", value: "linkedin.com/in/arunpalanisamy" },
-  { label: "Medium", value: "medium.com/@arunpalanisamy" },
+const personalSide = [
+  "Writing on geopolitics, culture, and technology power shifts.",
+  "Deep advocacy for Tamil language, heritage, and modern relevance.",
+  "Sports mindset: basketball + volleyball discipline applied to product execution.",
 ];
 
 function App() {
   return (
-    <div className="min-h-screen bg-midnight font-[Manrope] text-white">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute -left-32 top-16 h-72 w-72 rounded-full bg-electric/40 blur-[120px]" />
-          <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-cyan-500/30 blur-[140px]" />
-        </div>
-        <header className="relative z-10 mx-auto flex max-w-6xl flex-col gap-8 px-6 pb-16 pt-12 md:flex-row md:items-center md:justify-between">
-          <div className="space-y-6">
-            <p className="text-sm uppercase tracking-[0.35em] text-white/60">
-              Senior Software Developer
-            </p>
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-              Arun Palanisamy
-              <span className="block text-xl font-medium text-white/70 md:text-2xl">
-                Product Enthusiast · AI Powered Full-Stack Specialist
-              </span>
-            </h1>
-            <p className="max-w-xl text-base text-white/70">
-              Product-focused engineer with 7+ years turning ambiguous ideas into scalable, revenue-ready products. I blend
-              frontend-first UX craft with end-to-end backend ownership and AI-driven innovation.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/80">
-                Professional
-              </span>
-              <span className="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/80">
-                Personal · Open at your own risk
-              </span>
-            </div>
-          </div>
-          <div className="w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur">
-            <h2 className="text-lg font-semibold">Contact</h2>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
-              {contactLinks.map((link) => (
-                <li key={link.label} className="flex items-center justify-between gap-3">
-                  <span>{link.label}</span>
-                  <span className="text-white">{link.value}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </header>
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute left-[-10%] top-16 h-80 w-80 rounded-full bg-violet-500/30 blur-3xl" />
+        <div className="absolute right-[-8%] top-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
       </div>
 
-      <main className="mx-auto max-w-6xl space-y-20 px-6 pb-20">
-        <section className="grid gap-6 md:grid-cols-3">
-          {highlights.map((item) => (
-            <div
-              key={item.label}
-              className="rounded-2xl border border-white/10 bg-ink/60 p-6 shadow-lg shadow-black/20"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-white/50">{item.label}</p>
-              <p className="mt-4 text-3xl font-semibold text-white">{item.value}</p>
-              <p className="mt-2 text-sm text-white/70">{item.detail}</p>
-            </div>
+      <header className="mx-auto max-w-6xl px-6 pb-10 pt-12">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+          <p className="text-xs uppercase tracking-[0.35em] text-violet-300">Senior Software Developer · AI Product Builder</p>
+          <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">Arun Palanisamy</h1>
+          <p className="mt-4 max-w-3xl text-slate-300">
+            Building elite, revenue-focused digital products with React, mobile platforms, and production-grade AI systems.
+            I combine product judgment with full-stack execution, from LLM/RAG innovation to polished UX that people love.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-widest">
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-400/10 px-4 py-2 text-emerald-200">Professional Mode</span>
+            <span className="rounded-full border border-orange-300/40 bg-orange-400/10 px-4 py-2 text-orange-200">Personal Mode · Open at your own risk</span>
+          </div>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-6xl space-y-10 px-6 pb-16">
+        <section className="grid gap-4 md:grid-cols-4">
+          {heroStats.map((stat) => (
+            <article key={stat.label} className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+              <p className="text-xs uppercase tracking-widest text-slate-400">{stat.label}</p>
+              <p className="mt-2 text-2xl font-semibold text-white">{stat.value}</p>
+              <p className="mt-1 text-sm text-slate-300">{stat.detail}</p>
+            </article>
           ))}
         </section>
 
-        <section className="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Professional Profile</h2>
-            <p className="text-white/70">
-              Known for sharp product judgment, strong system design, and execution speed. I build things users actually
-              adopt, with measurable growth across loyalty, rewards, fintech, and consumer SaaS platforms.
-            </p>
-            <div className="grid gap-4 md:grid-cols-3">
-              {expertise.map((group) => (
-                <div
-                  key={group.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                >
-                  <h3 className="text-base font-semibold">{group.title}</h3>
-                  <ul className="mt-3 space-y-2 text-sm text-white/70">
-                    {group.items.map((item) => (
-                      <li key={item}>{item}</li>
+        <section className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-2xl font-semibold">Gamified Capability Dashboard</h2>
+              <span className="rounded-full border border-violet-300/30 px-3 py-1 text-xs text-violet-200">Live Skill Map</span>
+            </div>
+            <div className="space-y-5">
+              {capabilityTracks.map((track) => (
+                <div key={track.title} className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                  <div className="mb-2 flex items-center justify-between">
+                    <h3 className="font-semibold">{track.title}</h3>
+                    <span className="text-sm text-cyan-200">{track.score}/100</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-slate-700">
+                    <div className="h-2 rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" style={{ width: `${track.score}%` }} />
+                  </div>
+                  <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-slate-300">
+                    {track.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
           </div>
-          <aside className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-lg font-semibold">Achievements</h3>
-            <ul className="space-y-3 text-sm text-white/70">
-              {achievements.map((achievement) => (
-                <li key={achievement} className="rounded-xl border border-white/10 bg-black/20 p-4">
-                  {achievement}
-                </li>
+
+          <aside className="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/70 p-6">
+            <h2 className="text-2xl font-semibold">Signature Wins</h2>
+            <div className="mt-4 space-y-3">
+              {featuredWins.map((win) => (
+                <article key={win.title} className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <div className="mb-2 flex items-center justify-between gap-2">
+                    <h3 className="font-semibold">{win.title}</h3>
+                    <span className="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-wider text-slate-300">
+                      {win.badge}
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-300">{win.description}</p>
+                </article>
               ))}
-            </ul>
+            </div>
           </aside>
         </section>
 
-        <section className="space-y-6">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-semibold">Professional Experience</h2>
-            <span className="text-sm text-white/60">End-to-end product ownership</span>
-          </div>
-          <div className="space-y-6">
-            {experiences.map((role) => (
-              <article key={role.org} className="rounded-2xl border border-white/10 bg-ink/50 p-6">
-                <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold">{role.role}</h3>
-                    <p className="text-sm text-white/70">{role.org}</p>
-                  </div>
-                  <span className="text-xs uppercase tracking-[0.3em] text-white/50">{role.timeframe}</span>
-                </div>
-                <ul className="mt-4 space-y-3 text-sm text-white/70">
-                  {role.highlights.map((highlight) => (
-                    <li key={highlight}>• {highlight}</li>
+        <section className="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 className="text-2xl font-semibold">Professional Journey</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {timeline.map((item) => (
+              <article key={item.role} className="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <p className="text-xs uppercase tracking-widest text-violet-200">{item.period}</p>
+                <h3 className="mt-2 text-lg font-semibold">{item.role}</h3>
+                <p className="text-sm text-slate-300">{item.company}</p>
+                <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-slate-300">
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
               </article>
@@ -253,73 +189,30 @@ function App() {
           </div>
         </section>
 
-        <section className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-xl font-semibold">Education</h2>
-            <p className="mt-4 text-sm text-white/70">
-              B.Tech — Information Technology, Karpagam College of Engineering, Tamil Nadu (2018)
+        <section className="grid gap-6 md:grid-cols-2">
+          <article className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold">Personal Side</h2>
+            <p className="mt-2 text-sm text-slate-300">
+              Concern, conviction, and unapologetically personal reflections — where geopolitics, language, and identity meet.
             </p>
-            <h3 className="mt-6 text-lg font-semibold">Certifications</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
-              {certifications.map((certification) => (
-                <li key={certification}>• {certification}</li>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-300">
+              {personalSide.map((point) => (
+                <li key={point}>{point}</li>
               ))}
             </ul>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-xl font-semibold">Additional Information</h2>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li>Languages: English, Tamil.</li>
-              <li>Awards: Hosted 10+ coding contests; HackerRank bronze medals.</li>
-              <li>Hobbies: Amateur multi-sport athlete with a passion for basketball and volleyball.</li>
-            </ul>
-            <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-4">
-              <p className="text-sm text-white/70">
-                “Elite products are built at the intersection of empathy, systems thinking, and decisive execution.”
-              </p>
-            </div>
-          </div>
-        </section>
+          </article>
 
-        <section className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-black/20 p-6">
-            <h2 className="text-2xl font-semibold">Personal Space</h2>
-            <p className="mt-3 text-sm text-white/70">
-              Everything here is personal. Open at your own risk — stories, reflections, and bold takes that keep me
-              grounded.
-            </p>
-            <div className="mt-6 space-y-3 text-sm text-white/70">
-              <p>• Concern: Building humane technology while staying fiercely competitive.</p>
-              <p>• Current focus: The greatness of Tamil language & the reshaping of global geopolitics.</p>
-              <p>• Moodboard: Basketball courts, late-night sprints, and high-conviction product bets.</p>
+          <article className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold">Contact</h2>
+            <div className="mt-4 space-y-3 text-sm">
+              <p><span className="text-slate-400">Email:</span> arunpalanisamy21@gmail.com</p>
+              <p><span className="text-slate-400">Phone:</span> +91 94455 28764</p>
+              <p><span className="text-slate-400">Focus:</span> React, React Native, LLM apps, Fine-tuning, Agentic workflows</p>
+              <p><span className="text-slate-400">Languages:</span> English, Tamil</p>
             </div>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Personal Articles</h2>
-            <div className="grid gap-4">
-              {personalArticles.map((article) => (
-                <article key={article.title} className="rounded-2xl border border-white/10 bg-ink/40 p-5">
-                  <h3 className="text-lg font-semibold">{article.title}</h3>
-                  <p className="mt-2 text-sm text-white/70">{article.summary}</p>
-                  <button
-                    type="button"
-                    className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70 hover:border-white/60 hover:text-white"
-                  >
-                    Read draft
-                  </button>
-                </article>
-              ))}
-            </div>
-          </div>
+          </article>
         </section>
       </main>
-
-      <footer className="border-t border-white/10 bg-black/30">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>© 2024 Arun Palanisamy. Crafted for elite product storytelling.</p>
-          <p>React · Tailwind CSS · Mobile-ready by design</p>
-        </div>
-      </footer>
     </div>
   );
 }
